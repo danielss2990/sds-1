@@ -19,6 +19,7 @@ public interface RecordRepository extends JpaRepository<Record, Long> {
 			+ "(coaslece(:max,null) IS NULL OR obj.moment <= :max)")
 	Page<Record> findByMoments(Instant min, Instant max, Pageable pageRequest);
 	
+
 	
 
 }
